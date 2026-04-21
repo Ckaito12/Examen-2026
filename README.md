@@ -44,10 +44,10 @@ El archivo se vincula desde el HTML con `<script src="script.js"></script>`. Ver
 
 | Función | Tipo | Qué debe hacer |
 | :--- | :--- | :--- |
-| `calculateDamage(attack, defense)` | Declarada | Retornar la diferencia entre ataque y defensa. <br>• `attack`: valor numérico de ataque del personaje. <br>• `defense`: valor numérico de defensa del enemigo. |
-| `isAlive(health)` | Arrow function | Recibir `health` y retornar `true` si es mayor a `0`. <br>• `health`: puntos de vida actuales del personaje. |
+| `calculateDamage(attack, defense)` | Declarada | Retornar la diferencia entre ataque y defensa. Si el resultado es negativo, retornar `0`. <br>• `attack`: valor numérico de ataque del personaje. <br>• `defense`: valor numérico de defensa del enemigo. |
+| `isAlive(health)` | Arrow function | Retornar `true` solo si `health` es estrictamente mayor a `0`. Valores negativos también retornan `false`. <br>• `health`: puntos de vida actuales del personaje. |
 | `canCastSpell(currentMana, spellCost, isStunned)` | Arrow function | Retornar `true` solo si hay mana suficiente **y** el personaje no está aturdido. <br>• `currentMana`: mana disponible actualmente. <br>• `spellCost`: costo en mana del hechizo a lanzar. <br>• `isStunned`: booleano que indica si el personaje está aturdido. |
-| `getPresentation(name, characterClass, level)` | Declarada | Retornar un string que combine los tres datos. <br>• `name`: nombre del personaje. <br>• `characterClass`: clase del personaje (guerrero, mago, etc.). <br>• `level`: nivel actual del personaje. |
+| `getPresentation(name, characterClass, level)` | Declarada | Retornar un string con el formato exacto: `'Nombre — Clase (Nivel N)'`. <br>Ej: `'Zara Darkbane — Hechicera (Nivel 7)'` <br>• `name`: nombre del personaje. <br>• `characterClass`: clase del personaje (guerrero, mago, etc.). <br>• `level`: nivel actual del personaje. |
 
 **Resultados:**
 - Llamar a cada función con los valores declarados y mostrar cada resultado con `console.log`.
@@ -70,8 +70,9 @@ El archivo se vincula desde el HTML con `<script src="script.js"></script>`. Ver
 | **HTML** | La estructura principal sigue siendo `<div>` anidados. |
 | **Accesibilidad** | El formulario no tiene `<label>` o las imágenes no tienen `alt`. |
 | **CSS** | No se usa Grid para el layout. El sitio no es responsive. |
-| **JavaScript** | Errores en consola que impidan la ejecución del script. |
+| **JavaScript** | Errores en consola que impidan la ejecución del script. El archivo `script.js` no existe o no está vinculado al HTML. |
 | **Git** | Un solo commit con todo el trabajo, o mensajes sin formato descriptivo. |
+| **IA_HISTORY.md** | Secciones vacías, respuestas de una sola oración, o análisis sin fundamento técnico. |
 
 ---
 
@@ -91,7 +92,7 @@ El archivo se vincula desde el HTML con `<script src="script.js"></script>`. Ver
 
 Al finalizar, completar el formulario de entrega con:
 1. URL del **repositorio** forkeado en GitHub (debe ser público).
-2. Archivo `IA_HISTORY.md` dentro del repositorio.
+2. Verificar que el repositorio contenga: `index.html`, `style.css`, `script.js` e `IA_HISTORY.md`.
 
 ---
 
