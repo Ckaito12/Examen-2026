@@ -22,23 +22,25 @@
 
 ## Prompt 1
 
-### Momento del proceso
+Arreglando semantica del html
 
 ```
 <!--
+
   Indicá en qué punto del examen usaste este prompt.
-  No es sobre la hora exacta — es sobre el contexto: ¿qué estabas intentando resolver cuando recurriste a la IA?
-  Ej: "Cuando no sabía cómo estructurar el layout con Grid."
-  Ej: "Al terminar el HTML, para verificar si me faltaba algo de accesibilidad."
-  Ej: "Al principio del ejercicio de JS, para entender cómo arrancar."
--->
+
+  Después de hacer manualmente los cambios de HTML semántico, usé la IA para revisar si la estructura había quedado correcta y si todavía había errores de semántica o accesibilidad.
+
+  Quería controlar que los cambios que había hecho a mano realmente cumplieran la consigna de HTML y accesibilidad.
+
+
 ```
 
 ### Lo que le pedí a la IA
 
-```
-<!-- Pegá aquí el prompt exacto que escribiste. Debe ser el texto que vos escribiste, no la respuesta. -->
-```
+revisá bloque "x" de html y decime si todavía tiene errores de semántica o accesibilidad, no trabajamos en el css todavia, solo html
+
+este prompt lo use despues de chequear cada bloque
 
 ### Análisis del resultado obtenido
 
@@ -47,22 +49,27 @@
   Describí con tus propias palabras qué generó la IA. No copies el código ni la respuesta — analizála.
   Mínimo 3 oraciones. Respondé:
   - ¿Qué enfoque tomó la IA para resolver el problema?
+
+  La ia chequeo la semantica del html, controlando que no me salteara ningun etiqueta ni clase, esto sin hacer cambios en el css.
+
   - ¿El resultado era lo que esperabas? ¿Por qué sí o por qué no?
+
+  si, ya que solo fue validacion. 
+
   - ¿Qué parte te resultó útil como punto de partida?
--->
+
+  me resulto util no tener que revisar bloque por bloque otra vez, agilizando tiempo.
+
+
 ```
 
 ### Qué debí corregir manualmente y por qué
 
 ```
 <!--
-  Esta sección es la más importante. Sé específico/a. Mínimo 3 oraciones.
-  Respondé:
-  - ¿Qué error concreto tenía el resultado? (semántico, de accesibilidad, lógico, de estilo, etc.)
-  - ¿Cómo lo detectaste? (al probarlo en el browser, al leer el código, al ver la consola...)
-  - ¿Por qué estaba técnicamente incorrecto o insuficiente?
-  - ¿Qué cambiaste exactamente para que funcionara bien?
-  Si no corregiste nada, explicá por qué el resultado era correcto tal como estaba.
+ 
+En este primer prompt no tuve que corregir a la IA porque solo fue una revision a mi trabajo.
+
 -->
 ```
 
@@ -74,45 +81,25 @@
 
 ```
 <!--
-  Indicá en qué punto del examen usaste este prompt.
-  No es sobre la hora exacta — es sobre el contexto: ¿qué estabas intentando resolver cuando recurriste a la IA?
-  Ej: "Cuando no sabía cómo estructurar el layout con Grid."
-  Ej: "Al terminar el HTML, para verificar si me faltaba algo de accesibilidad."
-  Ej: "Al principio del ejercicio de JS, para entender cómo arrancar."
+  despues de corregir y validar el html para asegurarme de que los estilos sigan teniendo efecto en el index
 -->
 ```
 
 ### Lo que le pedí a la IA
 
 ```
-<!-- Pegá aquí el prompt exacto que escribiste. Debe ser el texto que vos escribiste, no la respuesta. -->
+hacé los cambios necesarios en css para que el nav y las secciones funcionen con el html nuevo
 ```
 
 ### Análisis del resultado obtenido
 
 ```
-<!--
-  Describí con tus propias palabras qué generó la IA. No copies el código ni la respuesta — analizála.
-  Mínimo 3 oraciones. Respondé:
-  - ¿Qué enfoque tomó la IA para resolver el problema?
-  - ¿El resultado era lo que esperabas? ¿Por qué sí o por qué no?
-  - ¿Qué parte te resultó útil como punto de partida?
--->
-```
+La ia adapto el css teniendo en cuenta los cambios realizados en el index, el resultado fue correcto y solo me quedo la parte del layout macro y el display flex 
 
 ### Qué debí corregir manualmente y por qué
 
 ```
-<!--
-  Esta sección es la más importante. Sé específico/a. Mínimo 3 oraciones.
-  Respondé:
-  - ¿Qué error concreto tenía el resultado? (semántico, de accesibilidad, lógico, de estilo, etc.)
-  - ¿Cómo lo detectaste? (al probarlo en el browser, al leer el código, al ver la consola...)
-  - ¿Por qué estaba técnicamente incorrecto o insuficiente?
-  - ¿Qué cambiaste exactamente para que funcionara bien?
-  Si no corregiste nada, explicá por qué el resultado era correcto tal como estaba.
--->
-```
+la IA adptao el css bastante bien, no tuve que hacer grandes cambios mas que controlar e implentar el layout macro y el flex ademas de controlar detalles visuales indicados en el readme sobre contraste
 
 ---
 
@@ -122,7 +109,17 @@
 <!--
   Mínimo 3 oraciones. Respondé:
   - ¿Qué tipo de errores repitió la IA que tuviste que corregir?
+
+  No hubo grandes errores por la IA, pero aun asi debi revisar desde la pagina web y consola por las dudas. Ademas compare resultados con las consignas del readme para asegurarme cumplir con dichas especificaciones.
+
   - ¿Hubo algo que la IA resolvió bien a la primera sin que necesitaras tocarlo?
+
+  La ia resolvio rapidamente las partes en las que le pedi simplemente revision semantica del html, me ahorro bastante tiempo. 
+
   - ¿Cambiarías la forma en que le pedís cosas a la IA la próxima vez? ¿Por qué?
+
+  Intentaria usar prompts un poco mas especificos o desarrollados.
+
+
 -->
 ```
