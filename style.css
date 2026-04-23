@@ -1,189 +1,277 @@
 body {
-      font-family: Georgia, serif;
-      margin: 0;
-      /* Error: bajo contraste â€” texto gris claro sobre fondo casi blanco */
-      color: #bbb;
-      background: #f5f5f5;
-    }
+  font-family: Georgia, serif;
+  margin: 0;
+  color: #f2f4f8;
+  background: #f5f5f5;
+}
 
-    .header {
-      background: #1a1a2e;
-      padding: 16px 40px;
-      border-bottom: 3px solid #e94560;
-    }
+main {
+  display: block;
+}
 
-    .header nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
+.header {
+  background: #1a1a2e;
+  padding: 16px 40px;
+  border-bottom: 3px solid #e94560;
+}
 
-    .logo {
-      color: #e94560;
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+.logo {
+  color: #f7a6b2;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
 
-    .nav-links li {
-      margin: 0;
-      padding: 0;
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-    /* Error: sin flexbox, navegaciÃ³n con display inline-block */
-    .nav-links a {
-      display: inline-block;
-      margin-right: 20px;
-      text-decoration: none;
-      /* Error: muy bajo contraste sobre fondo oscuro */
-      color: #555;
-    }
+.nav-links li {
+  margin: 0;
+  padding: 0;
+}
 
-    .hero {
-      padding: 60px 40px;
-      background: #16213e;
-    }
+.nav-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #f2f4f8;
+}
 
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #e94560;
-    }
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: #ffd9df;
+}
 
-    .class-badge {
-      display: inline-block;
-      background: #e94560;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-top: 8px;
-      /* Error: texto de badge tambiÃ©n con bajo contraste */
-      color: #aaa;
-    }
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 60px 40px;
+  background: #16213e;
+}
 
-    .section-title {
-      font-size: 1.8rem;
-      /* Error: color de encabezado con bajo contraste */
-      color: #ccc;
-      margin-bottom: 24px;
-      border-bottom: 2px solid #e94560;
-      padding-bottom: 8px;
-    }
+.hero-text {
+  flex: 1;
+}
 
-    .stats-section {
-      padding: 60px 40px;
-      background: #0f3460;
-    }
+.hero-title {
+  margin: 0;
+}
 
-    /* Error: grilla de stats con float en lugar de CSS Grid */
-    .stats-grid {
-      overflow: hidden;
-    }
+.hero-bio {
+  margin-bottom: 0;
+  color: #f2f4f8;
+}
 
-    .stat-card {
-      float: left;
-      width: 22%;
-      margin: 1.5%;
-      background: #16213e;
-      border: 1px solid #e94560;
-      padding: 20px;
-      text-align: center;
-      box-sizing: border-box;
-      border-radius: 8px;
-    }
+.hero-meta {
+  margin-bottom: 0;
+}
 
-    .stat-value {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #e94560;
-    }
+.hero-meta dt {
+  font-weight: bold;
+}
 
-    .stat-label {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      /* Error: bajo contraste */
-      color: #888;
-    }
+.hero-meta dd {
+  margin-left: 0;
+  color: #f2f4f8;
+}
 
-    .skills-section {
-      padding: 60px 40px;
-      background: #1a1a2e;
-    }
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #e94560;
+  flex-shrink: 0;
+}
 
-    .skill-card {
-      border: 1px solid #e94560;
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin-bottom: 12px;
-      background: #16213e;
-    }
+.class-badge {
+  display: inline-block;
+  background: #e94560;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: #ffffff;
+}
 
-    .skill-cost {
-      font-size: 0.8rem;
-      /* Error: bajo contraste */
-      color: #777;
-      margin-top: 4px;
-    }
+.section-title {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e94560;
+  padding-bottom: 8px;
+}
 
-    .tags {
-      margin-top: 8px;
-    }
+.stats-section {
+  padding: 60px 40px;
+  background: #0f3460;
+}
 
-    .tag {
-      display: inline-block;
-      background: #e94560;
-      padding: 2px 8px;
-      font-size: 0.75rem;
-      border-radius: 4px;
-      margin-right: 4px;
-      color: #fff;
-    }
+.stats-grid {
+  overflow: hidden;
+}
 
-    .challenge-section {
-      padding: 60px 40px;
-      background: #0f3460;
-    }
+.stat-card {
+  float: left;
+  width: 22%;
+  margin: 1.5%;
+  background: #16213e;
+  border: 1px solid #e94560;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
 
-    /* Error: campos sin estilos accesibles, sin indicador de foco visible */
-    input, select {
-      display: block;
-      width: 100%;
-      max-width: 500px;
-      padding: 10px;
-      margin-bottom: 14px;
-      border: 1px solid #e94560;
-      background: #16213e;
-      color: #bbb;
-      box-sizing: border-box;
-      border-radius: 4px;
-    }
+.stat-card img {
+  display: block;
+  margin: 0 auto 12px;
+}
 
-    /* Error: botÃ³n de envÃ­o como div, no como button */
-    .btn {
-      display: inline-block;
-      padding: 10px 28px;
-      background: #e94560;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff8fa3;
+  margin: 0;
+}
 
-    .footer {
-      background: #1a1a2e;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      border-top: 3px solid #e94560;
-    }
+.stat-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f2f4f8;
+  margin: 8px 0 0;
+}
+
+.skills-section {
+  padding: 60px 40px;
+  background: #1a1a2e;
+}
+
+.skill-card {
+  border: 1px solid #e94560;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  background: #16213e;
+}
+
+.skill-name {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.skill-desc {
+  margin: 0;
+  color: #f2f4f8;
+}
+
+.skill-cost {
+  font-size: 0.8rem;
+  color: #d9dee8;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.tags {
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.tag {
+  display: inline-block;
+  background: #e94560;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  margin-right: 4px;
+  color: #fff;
+}
+
+.challenge-section {
+  padding: 60px 40px;
+  background: #0f3460;
+}
+
+.challenge-intro {
+  margin-top: 0;
+  color: #f2f4f8;
+}
+
+#challenge-form label {
+  display: block;
+  max-width: 500px;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #e94560;
+  background: #16213e;
+  color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input::placeholder {
+  color: #d9dee8;
+}
+
+input:focus-visible,
+select:focus-visible,
+.btn:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid #ffd166;
+  outline-offset: 2px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 28px;
+  background: #e94560;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: 0;
+  font-family: inherit;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: #ff5f7a;
+}
+
+.footer {
+  background: #1a1a2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #e94560;
+}
+
+.footer p {
+  margin: 8px 0;
+}
